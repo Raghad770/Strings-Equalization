@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+ 
+	int i, j, k;
+	int n, m, q;
+	string s, t;
+ 
+	cin>>(q);
+	while (q--)
+	{
+		cin >> s >> t;
+ 
+		bool f = false;
+ 
+		n = s.length();
+		for (i = 0; i < n; i++)
+		{
+			for (j = 0; j < n; j++)
+			{
+				if (s[i] == t[j])
+				{
+					f = true;
+					break;
+				}
+			}
+ 
+			if (f)break;
+		}
+ 
+		if (f)
+			cout << ("YES")<<endl;
+		else
+			cout << ("NO")<<endl;
+	}
+ 
+	return
